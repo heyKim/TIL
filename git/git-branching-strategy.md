@@ -1,9 +1,9 @@
 # Git Braching Starategy(Git 브랜치 전략)
 ## 대표적인 브랜치 전략
-* [Git-flow](#GitFlow)
-* [Github-flow](#GithubFlow)
-* [Gitlab-flow](#GitlabFlow)
-* [현재 내 프로젝트의 git branch 전략](#MyProject'sgitbranchingstrategy)
+* [Git-flow](#git-flow)
+* [Github-flow](#github-flow)
+* [Gitlab-flow](#gitlab-flow)
+* [현재 내 프로젝트의 git branch 전략](#내-프로젝트-git-branching-strategy)
 
 ------
 ### Git Flow
@@ -50,5 +50,5 @@ github가 간단하지만 배포, 환경구성, 릴리즈, 통합에 대한 이�
 * github flow의 단점인 안정성과 배포시기 조절에 대한 부분을 Production 브랜치를 두어 보장함
 * 장점: production 브랜치에서 릴리즈된 코드가 항상 프로젝트의 최신 버전 상태를 유지해야 할 필요가 없음
 ------
-### My Project's git branching strategy
+### 내 프로젝트 git branching strategy
 ![my git branch strategy](/images/git/my-git-branch-strategy.png)
