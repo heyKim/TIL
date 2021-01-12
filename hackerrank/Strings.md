@@ -48,3 +48,17 @@ def hackerrankInString(s):
     return (re.search('.*'.join("hackerrank"), s) and "YES") or "NO"
 ```
 
+## Pangrams
+```python
+def pangrams(s):
+    lowerStr=s.lower()
+    for i in list('abcdefghijklmnopqrstuvwxyz'):
+        if lowerStr.find(i) == -1:
+            return 'not pangram'
+    return 'pangram'
+
+```
+```python
+def pangrams(s):
+    return ('pangram' if set(string.ascii_lowercase).issubset(set(s.lower())) else 'not pangram')
+```
