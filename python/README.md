@@ -1,6 +1,7 @@
 # Python
 ### 머릿속에 담을 것들
 * built-in function 기억하기
+
 |               |               | Build-in function |              |                |
 |---------------|---------------|:-----------------:|--------------|----------------|
 | `abs()`       | delattr()     | hash()            | memoryview() | set()          |
