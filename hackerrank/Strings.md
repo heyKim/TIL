@@ -18,18 +18,24 @@ def marsExploration(s):
 ```python
 def hackerrankInString(s):
     index=0
-    result='YES'
-    originStr='hackerrank'
     tempStr=s[index:]
-    for i in originStr:
-        print(index, tempStr, len(tempStr))
+    for i in list('hackerrank'):
         if tempStr.find(i) == -1:
-            result='NO'
-            break
+            return 'NO'
         else:
             index=tempStr.find(i)+1
             tempStr=tempStr[index:]
-    return result
+    return 'YES'
+```
+```python
+def hackerrankInString(s):
+    for idx, char in enumerate(list('hackerrank')):
+        try:
+            index = s.index(char)
+            s = s[index+1:]
+        except ValueError:
+            return "NO"
+    return "YES"
 ```
 ```python
 # more pritter
