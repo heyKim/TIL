@@ -15,5 +15,8 @@
 - [ ] Django backend boilerplate
 
 # 특명
-- [ ] Serverless
+* Serverless
+  - [x] Azure Function 실습
+  - [ ] AWS Lambda 실습
+  - [ ] Kubeless 실습
 - [ ] python
