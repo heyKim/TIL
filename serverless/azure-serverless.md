@@ -1,4 +1,9 @@
 # Azure Serverless
+* Microsoft Power Automate
+* Azure Logic Apps
+* Azure Functions
+* Azure App Service WebJobs
+-----
 ## Azure Function이란?
 * 2016년 3월에 발표
 * AWS Lambda, Google Cloud Functions, IBM OpenWhisk 와 비슷한 서비스
@@ -31,7 +36,10 @@ Notification Hubs, Event Grid, Event Hubs, Cosmos DB, Twilio, 스토리지 등�
 * 외부 서비스와 연계된 트리거
     * A Webhook fires (e.g., Github project update)
     * Twilio(SMS message)
-
+-----
+## Monitoring
+### Azure Application Insights
+built-in 모니터링 tool
 
 -----
 ## Durable Functions
