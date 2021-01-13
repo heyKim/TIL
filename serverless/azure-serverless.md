@@ -1,5 +1,5 @@
 # Azure Serverless
-## Azure Serverless란?
+## Azure Function이란?
 * 2016년 3월에 발표
 * AWS Lambda, Google Cloud Functions, IBM OpenWhisk 와 비슷한 서비스
 
