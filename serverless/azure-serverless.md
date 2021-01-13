@@ -9,7 +9,7 @@
 * AWS Lambda, Google Cloud Functions, IBM OpenWhisk 와 비슷한 서비스
 
 ### Glossary
-* Functions App: Azure Function들을 담는 그룹. Functions App을 생성해야 그 아래 Azure Function을 생성할 수 있다.
+* Functions App: Azure Function들을 담는 상자. Functions App을 생성해야 그 아래 Azure Function을 생성할 수 있다.
 * Azure Function: 클라우드 환경에서 작은 Function or Code를 실행하기 위한 솔루션
 * Trigger: Azure Function을 실행시키는 Event
 
