@@ -53,6 +53,10 @@ CPU, Memory, OS, Networking 등에 대해서 고민할 필요가 없다.
 * AWS Lambda (2014.11)
     * API Gateway, DynamoDB, CloudWatch, S3 등에서 event 받음
 * Azure Functions
+    * Microsoft Power Automate
+    * Azure Logic Apps
+    * [Azure Functions](/serverless/azure/azure-functions.md)
+    * Azure App Service WebJobs
 * Google Cloud Functions
 ### Serverless on Kubernetes
 * OpenFaas
