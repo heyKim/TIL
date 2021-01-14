@@ -29,7 +29,7 @@
 * restAPI 테스트
 ![Http Test](/images/azure/azure-function-apitest.png)
 ### Azure에 배포
-* Upload settings
+* Upload settings  
 ![Upload settings](/images/azure/azure-function-deploy.png)
 * View output
 ```
