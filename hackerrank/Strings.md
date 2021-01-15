@@ -134,3 +134,36 @@ def weightedUniformStrings(s, queries):
         else:
             yield 'No'
 ```
+## Separate the Numbers
+```python
+def separateNumbers(s):
+    targetStr=str(s)
+    targetLen=len(targetStr)
+    idx=0
+    if targetLen == 1:
+        print('NO')
+    else:
+        for i in range(1,int(targetLen/2)+1):
+            present=targetStr[idx:idx+i]
+            result=chkNextNum(present, targetStr)
+            if result:
+                print('YES {}'.format(present))
+                break
+            elif i==int(targetLen/2) and not result:
+                print('NO')
+            
+            
+def chkNextNum(first,targetStr):
+    idx=len(first)
+    present=first
+    while idx < len(targetStr):
+        next=str(int(present)+1)
+        nextLen=len(next)
+        if next==targetStr[idx:idx+nextLen]:
+            idx+=nextLen
+            present=next
+            pass
+        else:
+            return False
+    return True
+```
