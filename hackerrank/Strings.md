@@ -167,3 +167,33 @@ def chkNextNum(first,targetStr):
             return False
     return True
 ```
+
+## Funny String
+```python
+def funnyString(s):
+    r=list(s)
+    r.reverse()
+
+    prev=0
+    sDifference=[]
+    for idx,n in enumerate(list(s)):
+        if idx!=0:
+            sDifference.append(abs(ord(n)-prev))
+        prev=ord(n)
+
+    prev=0
+    rDifference=[]
+    for idx,n in enumerate(r):
+        if idx!=0:
+            rDifference.append(abs((ord(n)-prev)))
+        prev=ord(n)
+
+
+    return "Funny" if sDifference == rDifference else "Not Funny"
+```
+```python
+def funnyString(s):
+    st=list(s)
+    diff=[abs(ord(a)-ord(b)) for a,b in zip(st,st[1:])]
+    return "Funny" if (diff==diff[::-1]) else "Not Funny"
+```
