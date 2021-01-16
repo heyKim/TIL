@@ -169,6 +169,7 @@ def chkNextNum(first,targetStr):
 ```
 
 ## Funny String
+adjacent difference 문제
 ```python
 def funnyString(s):
     r=list(s)
@@ -196,4 +197,10 @@ def funnyString(s):
     st=list(s)
     diff=[abs(ord(a)-ord(b)) for a,b in zip(st,st[1:])]
     return "Funny" if (diff==diff[::-1]) else "Not Funny"
+```
+## Gemstones
+intersection(교집합) 문제
+```python
+def gemstones(arr):
+    return len(set.intersection(*map(set,arr)))
 ```
