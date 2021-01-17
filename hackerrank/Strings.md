@@ -204,3 +204,11 @@ intersection(교집합) 문제
 def gemstones(arr):
     return len(set.intersection(*map(set,arr)))
 ```
+
+## Alternating Characters
+```python
+def alternatingCharacters(s):
+    sA=re.sub(r'A{2,}','A',s)
+    sB=re.sub(r'B{2,}','B',sA)
+    return(len(s)-len(sB))
+```
