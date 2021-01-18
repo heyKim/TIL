@@ -240,3 +240,47 @@ def theLoveLetterMystery(s):
     s = list(map(ord, s))
     return sum(map(abs, (s[x]-s[-x-1] for x in range(len(s)//2))))
 ```
+
+## (참고)check if a string is palindrome or not
+```python
+# Method#1
+def isPalindrome(s):
+    return s == s[::-1]
+```
+```python
+def isPalindrome(str):
+ 
+    # Run loop from 0 to len/2 
+    for i in range(0, int(len(str)/2)): 
+        if str[i] != str[len(str)-i-1]:
+            return False
+    return True
+```
+```python
+def isPalindrome(s):
+    rev = ''.join(reversed(s))
+    if (s == rev):
+        return True
+    return False
+```
+## Palindrome Index
+```python
+# Time limit exceeded
+def palindromeIndex(s):
+    for idx,elem in enumerate(s):
+        temp=list(s)
+        temp.pop(idx)
+        if temp==temp[::-1]:
+            return idx
+    return -1
+```
+```python
+# 일부 Time limit exceeded
+def palindromeIndex(s):
+    strObj=''
+    for i,elem in enumerate(s):
+        strObj = s[0 : i : ] + s[i + 1 : :]
+        if strObj==strObj[::-1]:
+            return i
+    return -1
+```
