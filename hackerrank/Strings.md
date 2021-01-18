@@ -223,3 +223,20 @@ def beautifulBinaryString(b):
 def beautifulBinaryString(b):
     return b.count('010')
 ```
+
+## The Love-Letter Mystery
+* palindrome(회문) 문제
+* palindrome이란? 내 이름은 이효리 거꾸로 해도 이효리 같이 똑바로 읽어도 거꾸로 읽어도 같은 문장,단어,숫자
+```python
+def theLoveLetterMystery(s):
+    halfLen=int(len(s)/2)
+    count=0
+    for i,j in zip(s[halfLen:],s[::-1][halfLen:]):
+        count+=abs(ord(i)-ord(j))
+    return count
+```
+```python
+def theLoveLetterMystery(s):
+    s = list(map(ord, s))
+    return sum(map(abs, (s[x]-s[-x-1] for x in range(len(s)//2))))
+```
