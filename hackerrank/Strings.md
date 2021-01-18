@@ -284,3 +284,32 @@ def palindromeIndex(s):
             return i
     return -1
 ```
+```python
+# 제일 빠름
+def palindromeIndex(s):
+    for i,j in enumerate(range(0,len(s)//2),1):
+        if s[-i] == s[j]:
+            continue
+        if s[j:-i]==s[j:-i][::-1]:
+            return len(s)-i
+        elif s[j+1:-i+1]==s[j+1:-i+1][::-1]:
+            return j
+        return -1
+    return -1
+```
+```python
+def isPalindrome(str): 
+    for i in range(0, int(len(str)/2)): 
+        if str[i] != str[len(str)-i-1]:
+            return False
+    return True
+
+def palindromeIndex(s):
+    for i in range(int((len(s)+1)/2)):
+        if s[i] != s[len(s)-i-1]:
+            if isPalindrome(s[:i]+s[i+1:]):
+                return i
+            else:
+                return len(s)-i-1
+    return -1
+```
