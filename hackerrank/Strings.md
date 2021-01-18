@@ -212,3 +212,14 @@ def alternatingCharacters(s):
     sB=re.sub(r'B{2,}','B',sA)
     return(len(s)-len(sB))
 ```
+
+## Beautiful Binary String
+```python
+def beautifulBinaryString(b):
+    return len(re.findall(r'010',b))
+```
+```python
+# simpler
+def beautifulBinaryString(b):
+    return b.count('010')
+```
