@@ -313,3 +313,12 @@ def palindromeIndex(s):
                 return len(s)-i-1
     return -1
 ```
+
+## Making Anagrams
+```python
+def makingAnagrams(s1, s2):
+    sum=0
+    for elem in string.ascii_lowercase:
+        sum+=abs(s1.count(elem)-s2.count(elem))
+    return sum
+```
