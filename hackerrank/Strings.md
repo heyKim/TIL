@@ -322,3 +322,12 @@ def makingAnagrams(s1, s2):
         sum+=abs(s1.count(elem)-s2.count(elem))
     return sum
 ```
+## Game of Thrones - I
+```python
+def gameOfThrones(s):
+    count_odd=0
+    for i in string.ascii_lowercase:
+        if s.count(i)%2 == 1:
+            count_odd+=1
+    return 'NO' if count_odd>1 else 'YES'
+```
