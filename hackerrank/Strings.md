@@ -333,6 +333,7 @@ def gameOfThrones(s):
 ```
 
 ## Two String
+* 두 문자열에서 문자 비교
 ```python
 def twoStrings(s1, s2):
     for i in s1:
