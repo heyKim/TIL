@@ -331,3 +331,16 @@ def gameOfThrones(s):
             count_odd+=1
     return 'NO' if count_odd>1 else 'YES'
 ```
+
+## Two String
+```python
+def twoStrings(s1, s2):
+    for i in s1:
+        if i in s2:
+            return 'YES'
+    return 'NO'
+```
+```python
+def twoStrings(s1, s2):
+    return 'YES' if set(s1) & set(s2) else 'NO'
+```
