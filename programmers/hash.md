@@ -54,21 +54,6 @@ def solution(c):
     return reduce(lambda x,y:x*y,[a+1 for a in collections.Counter([x[1] for x in c]).values()])-1
 ```
 ```python
-
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
 def solution(clothes):
     clothes_type = {}
 
@@ -83,4 +68,33 @@ def solution(clothes):
         cnt *= num
 
     return cnt - 1
+```
+
+## 전화번호 목록
+```python
+# 정확성: 84.6
+# 효율성: 15.4
+# 합계: 100.0 / 100.0
+def solution(phone_book):
+    for i in range(len(phone_book)):
+        for j in range(len(phone_book)):
+            if i==j:
+                pass
+            elif len(phone_book[i])<len(phone_book[j]) and phone_book[i] == phone_book[j][:len(phone_book[i])]:
+                return False
+    return True
+```
+```python
+# 채점 결과
+# 정확성: 84.6
+# 효율성: 15.4
+# 합계: 100.0 / 100.0
+# startswith를 쓴 방법도 있군...
+def solution(phoneBook):
+    phoneBook = sorted(phoneBook)
+
+    for p1, p2 in zip(phoneBook, phoneBook[1:]):
+        if p2.startswith(p1):
+            return False
+    return True
 ```
