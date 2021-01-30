@@ -98,3 +98,45 @@ def solution(phoneBook):
             return False
     return True
 ```
+
+## 완주하지 못한 선수
+```python
+# 시간 초과
+def solution(participant, completion):
+    for i in participant:
+        if i in completion:
+            completion.remove(i)
+        else:
+            return i
+```
+```python
+def solution(participant, completion):
+    participant.sort()
+    completion.sort()
+    for i,j in zip(participant,completion):
+        if i!=j:
+            return i
+    return participant.pop()
+```
+```python
+import collections
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
+```
+```python
+# 다른 사람의 풀이..대박적..
+def solution(participant, completion):
+    answer = ''
+    temp = 0
+    dic = {}
+    for part in participant:
+        dic[hash(part)] = part
+        temp += hash(part)
+    for com in completion:
+        temp -= hash(com)
+    answer = dic[temp]
+
+    return answer
+```
+
