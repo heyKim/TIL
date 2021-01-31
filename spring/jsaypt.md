@@ -4,7 +4,7 @@
 ## Spring Boot에 Jsaypt 적용 방법 
 ### Dependency 추가 
 ```xml 
-<!--Mavne--> 
+<!--Maven--> 
 <!-- https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter --> 
 <dependency> 
     <groupId>com.github.ulisesbocchio</groupId> 
