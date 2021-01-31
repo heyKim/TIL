@@ -1,7 +1,7 @@
-# Jsaypt(Java Simplified Encryption) 
+# Jasypt(Java Simplified Encryption) 
 * Spring Boot provides utilities for encrypting property sources 
  
-## Spring Boot에 Jsaypt 적용 방법 
+## Spring Boot에 Jasypt 적용 방법 
 ### Dependency 추가 
 ```xml 
 <!--Maven--> 
@@ -18,7 +18,7 @@ compile group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', v
 ``` 
 * (참고) jasypt-spring-boot-starter는 개인 프로젝트임. Spring에서 공식지원하는 라이브러리는 없음 
  
-### Custom Jsaypt Encryptor 생성 
+### Custom Jasypt Encryptor 생성 
 * jasypt Config 설정 
 ```java 
 @Configuration 
@@ -60,7 +60,7 @@ ptor.setPassword("somePassword"); //암호화에 사용할 키 (중요함)
 	} 
 ``` 
  
-### Jsaypt 적용하여 Properties 암호화 
+### Jasypt 적용하여 Properties 암호화 
 * 위의 실행 암호화를 했을 때 실행 결과로 나온 `ENC(Gxloau1Q4SIPesrGOMaUhQ==)`와 같은 값들을 properties 또는 yaml 정보들을 아래와 같이 변경해주면 됨. 
 ```yml 
 spring.datasource.url=ENC(Gxloau1Q4SIPesrGOMaUhQ==) 
