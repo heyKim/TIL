@@ -49,3 +49,24 @@ def solution(prices):
                 break
     return answer
 ```
+
+## 기능개발
+```python
+import math
+def solution(progresses, speeds):
+    result=[]
+    workdays=[]
+    for i,j in zip(progresses,speeds):
+        workdays.append(math.ceil((100-i)/j)) # 작업일수
+
+    prev=0
+    result=[]
+    for i in workdays:
+        count=1
+        if i>prev:
+            prev=i
+            result.append(1)
+        else:
+            result[len(result)-1]+=1
+    return result
+```
