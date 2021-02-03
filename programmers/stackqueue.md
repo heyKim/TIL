@@ -92,3 +92,36 @@ def solution(progresses, speeds):
 
     return retList
 ```
+
+## 다리를 지나는 트럭
+```python
+def solution(bridge_length, weight, truck_weights):
+    on_bridge=[0]*bridge_length
+    second = 0
+    while len(on_bridge)!=0:
+        on_bridge.pop(0)
+        if len(truck_weights)!=0:
+            if sum(on_bridge)+truck_weights[0] <= weight:
+                on_bridge.append(truck_weights[0])
+                truck_weights.pop(0)
+            else:
+                on_bridge.append(0)
+        second+=1
+    return second
+```
+:star: `while` 조건으로 리스트를 줄수도 있음. 0이나 null 인 경우 False
+```python
+# 내가 짠 소스랑 비슷한데 더 간결함
+def solution(bridge_length, weight, truck_weights):
+    q=[0]*bridge_length
+    sec=0
+    while q:
+        sec+=1
+        q.pop(0)
+        if truck_weights:
+            if sum(q)+truck_weights[0]<=weight:
+                q.append(truck_weights.pop(0))
+            else:
+                q.append(0)
+    return sec
+```
