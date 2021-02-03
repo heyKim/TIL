@@ -20,7 +20,7 @@
     * [Freemarker](https://freemarker.apache.org/docs/) 
     * [Groovy](https://docs.groovy-lang.org/docs/next/html/documentation/template-engines.html#_the_markuptemplateengine) 
     * [Thymeleaf](https://www.thymeleaf.org/) 
-    * [Mustache](https://mustache.github.io/) 
+    * [](https://mustache.github.io/) 
 * 보통 템플릿 파일위치는 `src/main/resources/templates`에 둔다. 
 * [Spring Boot Template Engines Comparison](https://springhow.com/spring-boot-template-engines-comparison/) 
  
