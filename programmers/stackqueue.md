@@ -125,3 +125,20 @@ def solution(bridge_length, weight, truck_weights):
                 q.append(0)
     return sec
 ```
+
+## 프린트
+```python
+def solution(priorities, location):
+    answer = 0
+    while True:
+        maxIdx=priorities.index(max(priorities))
+        if maxIdx > location:
+            location=len(priorities)-maxIdx-1+location
+        elif maxIdx < location:
+            location=location-maxIdx-1
+        else:
+            break
+        priorities=priorities[maxIdx+1:]+priorities[:maxIdx]
+        answer+=1
+    return answer+1
+```
