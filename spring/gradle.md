@@ -38,9 +38,9 @@ plugins {
 } 
 ``` 
 ```yml 
-    // legacy method 니깐 이제는 이런 식으로 사용하지 말 것 
-    apply plugin: 'anypluginanme' 
-    apply plugin: 'maven' 
+// legacy method 니깐 이제는 이런 식으로 사용하지 말 것 
+apply plugin: 'anypluginanme' 
+apply plugin: 'maven' 
 ``` 
  
 #### Maven Plugin를 이용한 Deploying to a Maven repository 
@@ -113,9 +113,9 @@ plugins {
 build.script의 `dependencies` 블록에 여러 가지 다양한 종속성 구성(implementation, compileOnly, runtimeOnly, annotationProcessor 등)을 사용하여 라이브러리 종속성을 선언할 수 있다. 
 ```groovy 
   dependencies { 
-    // 모니터링 
-    implementation 'org.springframework.boot:spring-boot-starter-actuator' 
-    compileOnly 'org.projectlombok:lombok' 
+  	// 모니터링 
+	implementation 'org.springframework.boot:spring-boot-starter-actuator' 
+	compileOnly 'org.projectlombok:lombok' 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools' 
 	annotationProcessor 'org.projectlombok:lombok' 
   } 
