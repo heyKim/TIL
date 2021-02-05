@@ -7,6 +7,7 @@
 - [ ] ES6 적용한 것 정리+ 새롭게 적용해보기
 - [ ] TypeScript: Microsoft에서 개발 및 유지 관리 하며 오픈 소스 프로그래밍 언어
 - [ ] Design Pattern 정리
+- [ ] python(진행중)
 
 
 ## Boilerplate
@@ -14,9 +15,13 @@
 - [ ] node backend boilerplate
 - [ ] Django backend boilerplate
 
-# 특명
-* Serverless
+## Serverless
   - [x] Azure Function 실습
   - [ ] AWS Lambda 실습
   - [ ] Kubeless 실습
-- [ ] python
+  
+## High priority
+- [ ] maven distributionManagement의 repository vs snapshotRepository 비교
+- [ ] Java8 정리
+- [ ] helm (당장 습득 필요함)
+- [ ] k8s
