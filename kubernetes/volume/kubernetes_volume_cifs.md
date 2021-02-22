@@ -57,8 +57,8 @@ spec:
 * Pod 생성 
 `kubectl apply -f pod.yml` 
  
-### Testing 
-컨테이너 안에 들어가서 /data로 마운트 되어 있는지 확인 
+### Testing  
+* 컨테이너 안에 들어가서 /data로 마운트 되어 있는지 확인  
 `kubectl exec -ti busybox /bin/sh` 
 ------
 ### CIFS Trouble Shooting
