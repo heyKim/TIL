@@ -1,6 +1,6 @@
 # Spring Annotaion
 * [@Bean](#bean) - Bean등록. 단, 개발자가 컨트롤이 불가능한 외부 라이브러리들을 Bean으로 등록하고 싶은 경우 사용.
-* [@Component](#component) - Bean등록. 단, 개발자가 직접 컨트롤이 가능한 Class인 경우에 사용.
+* [@Component](#component) - Bean등록("스프링아 난 너가 관리해야 하는 빈이야"라고 말하는 것). 단, 개발자가 직접 컨트롤이 가능한 Class인 경우에 사용.
 * [@ComponentScan](#componentscan) - 빈 등록하기
 * [@EnableAutoConfiguration](#enableautoconfiguration) - 설정 자동 등록하기
 * [@PostContruct](#postcontruct) - Bean 객체 생성한 이후 초기화를 수행할 메소드 지정
