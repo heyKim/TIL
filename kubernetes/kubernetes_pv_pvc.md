@@ -1,8 +1,8 @@
-# Volume 이란? Pod에 종속되는 디스크 
+# Volume
+Volume 이란? Pod에 종속되는 디스크 
 Container에 저장된 데이터는 휘발성! Container가 죽으면 그 데이터도 날아감. 
 그래서 Container에 저장된 데이터를 영구적으로 저장하거나 다른 여러 Container와 데이터를 공유하기 위해서 Volume이라는 디스크 서비스를 사용한다! 
- 
- 
+
  
 ## Volume 종류 
 * emptyDir (Pod 내 공유) 
