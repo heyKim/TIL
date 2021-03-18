@@ -16,12 +16,14 @@ Container에 저장된 데이터는 휘발성! Container가 죽으면 그 데이
 * CIFS
 
 ## PV(Persistent Volumes)과 PVC(Persistent Volume Claims) 
-위에 Volume을 개발자가 사용하려면 Cluster에서 접근 가능한 Network Storage Infra에 대한 사전 지식이 요구되고 Server IP나 공유 폴더, Volume ID, name등이 노출되는 약점이 있음. 
-그래서 k8s는 인프라에 대한 복잡성을 추상화 시키고 개발자들이 손쉽게 인프라 자원을 사용할 수 있도록 PV와 PVC라는 Object Resource를 사용! 
+위에 Volume을 개발자가 사용하려면 Cluster에서 접근 가능한 Network Storage Infra에 대한 사전 지식이 요구되고 Server IP나 공유 폴더, Volume ID, name등이 노출되는 약점이 있음.  
+그래서 k8s는 인프라에 대한 복잡성을 추상화 시키고 개발자들이 손쉽게 인프라 자원을 사용할 수 있도록 PV와 PVC라는 Object Resource를 사용!  
  
 클라우드 관리자는 실제 스토리지를 생성하고, 이 디스크의 일부 용량을 할당한 PV를 Kubernetes에 등록 
-개발자는 Pod를 생성할 때, Volume을 정의하고 이 부분에 PVC를 지정하여 시스템 관리자가 생성한 PV를 연결 
-
+개발자는 Pod를 생성할 때, Volume을 정의하고(=데이터를 저장해두겠다) 이 부분에 PVC를 지정하여 시스템 관리자가 생성한 PV를 연결
+(관리자가 만든 PV를 연결한 PVC 생성 -> PVC를 지정하여 Pod 생성)
+* PV는 물리 디스크를 쿠버네티스 클러스터에 표현한 것(made by 클라우드 관리자)
+* PVC는 Pod의 볼륨과 PVC를 연결(바인딩/Bind)하는 관계 선언(made by 개발자)
 ### PVC생성
 ```yml
 apiVersion: v1
@@ -56,6 +58,3 @@ PV는 기존에 사용했던 PVC가 아니더라도 다른 PVC로 재활용이 �
 * Retain : PV의 데이터를 그대로 보존 
 * Recycle : 재사용하게 될 경우 기존의 PV 데이터들을 모두 삭제 후 재사용 가능 
 * Delete : 사용이 종료되면 해당 볼륨을 삭제(Default) 
-
-
-#### PV 정적 프로비저닝 예제
