@@ -63,3 +63,4 @@
 
 ## Reference 
 * [스퀴드(Squid)로 프록시 서버 구축하기](!https://github.com/Yongdae-Kim/HowToUseSquid)
+* [GCP에서 Squid를 이용한 Proxy 서버 설정 방법](!https://kibua20.tistory.com/129)
