@@ -48,7 +48,7 @@ spec:
       targetPort: 8080
   type: LoadBalancer
 ```
-
+* (참고)[How do I expose the Kubernetes services running on my Amazon EKS cluster?](https://aws.amazon.com/ko/premiumsupport/knowledge-center/eks-kubernetes-services-cluster/)
 #### 초기 설정
 * 초기 credentials 확인
     * pod name 확인  
