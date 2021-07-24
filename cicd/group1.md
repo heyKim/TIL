@@ -19,7 +19,7 @@
 ---
 ## GitOps 배포방식
 * Push 방식
-![pusj 배포방식](/cicd/assets/normal_cicd_flow.png)
+![push 배포방식](/cicd/assets/normal_cicd_flow.png)
 
 * Pull 방식
 ![pull 배포방식](/cicd/assets/gitops_cicd_flow.png)## Tools
@@ -47,7 +47,9 @@ ArgoCD란?
 
 ### ArgoCD 설치
 * helm repo 추가
-`helm repo add argo https://argoproj.github.io/argo-helm`
+```bash
+helm repo add argo https://argoproj.github.io/argo-helm
+```
 * config 수정을 위해서 source 다운로드 및 소스 수정 후 argocd 설치
 ```bash
 # source 다운로드
@@ -76,20 +78,21 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ArgoCD는 `Application`라는 CRD(Custom Resource Definition)를 제공한다. Application은 Kubernetes resources 묶음으로 배포를 책임진다.
 #### Application 생성
 ![ArgoCD App생성1](/cicd/assets/argocd-application-create-general.png)
-![ArgoCD App생성2](/cicd/assets/argocd-application-create-source-destination.png)
-![ArgoCD App생성3](/cicd/assets/argocd-application-create-kustomize.png)
 * Application Name: App의 이름을 적는다.
 * Project: 프로젝트를 선택하는 필드. 쿠버네티스의 namespace와 비슷한 개념으로 여러 App을 논리적인 project로 구분하여 관리할 수 있다.
 * Sync Policy: Git 저장소의 변경 사항을 어떻게 sync할지 결정. Auto는 자동으로 Git 저장소의 변경사항을 운영에 반영하고 Manual은 사용자가 버튼 클릭 혹은 API를 통해 직접 운영 반영을 해야함.
+![ArgoCD App생성2](/cicd/assets/argocd-application-create-source-destination.png)
 * Repository URL: ArgoCD가 바라볼 Git 저장소를 의미
 * Revision: Git의 어떤 revision (HEAD, master branch 등)을 바라 볼지 결정
 * Path: Git 저장소에서 어떤 디렉토리를 바라 볼지 결정함. (dot(.)인 경우 root path를, 디렉토리 이름을 적으면 해당 디렉토리의 배포 정의서만 tracking 함)
 * Cluster: 쿠버네티스의 어느 클러스터에 배포할지를 결정
 * Namespace: 쿠버네티스 클러스터의 어느 네임스페이스에 배포할지를 결정
+![ArgoCD App생성3](/cicd/assets/argocd-application-create-kustomize.png)
 * Kubernetes manifests Tool 선택: Kubernetes manifest를 정의할 tool 을 선택하고 설정 정보를 입력한다.
 
 ![ArgoCD App생성4](/cicd/assets/argocd-application-after-creat.png)
 ArgoCD Application 생성 후, 동기화 이전이라 `OutOfSync`상태
+
 ![ArgoCD App생성5](/cicd/assets/argocd-application-deploy-change.png)
 config repo에서 Deployment의 namespace을 변경하니 이를 감지하여 동기화가 필요한 상태임을 표시해줌
 #### ArgoCD Image Updater
